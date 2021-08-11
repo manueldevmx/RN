@@ -16,9 +16,9 @@ export default function TiendaStack() {
         component={Tienda}
         name="tienda"
         options={{
-          headerStyle: {backgroundColor: "#c034eb"},
+          headerStyle: {backgroundColor: "#ab00ff"},
           headerTintColor: "#fff",
-          title: "Agregar Nuevo Producto",
+          title: "Tickets Favoritos",
         }}
       />
 
@@ -26,7 +26,7 @@ export default function TiendaStack() {
         component={AddProduct}
         name="detalle"
         options={{
-          headerStyle: {backgroundColor: "#c034eb"},
+          headerStyle: {backgroundColor: "#ab00ff"},
           headerTintColor: "#fff",
           title: "Agregar Nuevo Producto",
         }}
@@ -38,7 +38,7 @@ export default function TiendaStack() {
         name="mensajes"
         options={{
           title: "Mensajes",
-          headerStyle: { backgroundColor: "#128C7E" },
+          headerStyle: { backgroundColor: "#c034eb" },
           headerTintColor: "#fff",
         }}
       />
@@ -47,7 +47,7 @@ export default function TiendaStack() {
         name="contacto"
         options={{
           title: "Contácto",
-          headerStyle: { backgroundColor: "#128C7E" },
+          headerStyle: { backgroundColor: "#c034eb" },
           headerTintColor: "#fff",
         }}
       />

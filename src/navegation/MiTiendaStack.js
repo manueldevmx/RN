@@ -11,7 +11,7 @@ export default function MiTiendaStack() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerStyle: { backgroundColor: "#c034eb" },
+        headerStyle: { backgroundColor: "#ab00ff" },
         headerTintColor: "#fff",
       }}
     >
@@ -19,8 +19,8 @@ export default function MiTiendaStack() {
         component={MiTienda}
         name="mitienda"
         options={{
-          title: "Mi Tienda",
-          headerStyle: { backgroundColor: "#c034eb" },
+          title: "Scan Tickets",
+          headerStyle: { backgroundColor: "#ab00ff" },
           headerTintColor: "#fff",
         }}
       />
@@ -29,7 +29,7 @@ export default function MiTiendaStack() {
         name="add-product"
         options={{
           title: "Agregar Nuevo Producto",
-          headerStyle: { backgroundColor: "#c034eb" },
+          headerStyle: { backgroundColor: "#ab00ff" },
           headerTintColor: "#fff",
         }}
       />

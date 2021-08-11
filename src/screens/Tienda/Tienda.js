@@ -4,7 +4,7 @@ import { View, Text } from 'react-native'
 export default function Tienda() {
     return (
         <View>
-            <Text>Tienda</Text>
+            <Text>Aqui iran los tickets favoritos</Text>
         </View>
     )
 }
