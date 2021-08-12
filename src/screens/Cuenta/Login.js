@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   imglogo: {
     width: 206,
     height: 206,
-    marginTop: 40,
+    marginTop: 20,
     alignSelf: "center",
   },
   textobanner: {
