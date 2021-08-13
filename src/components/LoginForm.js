@@ -8,11 +8,11 @@ import { validarsesion } from "../Utils/Acciones";
 import * as firebase from "firebase";
 
 export default function LoginForm(props) {
-  const { toastRef } = (props);
+  const { toastRef } = props;
   const [email, setemail] = useState("");
-  const [show, setshow] = useState(true);
   const [password, setpassword] = useState("");
   const navigation = useNavigation();
+  const [show, setshow] = useState(true);
 
   validarsesion();
 
@@ -45,8 +45,8 @@ export default function LoginForm(props) {
     <View style={styles.container}>
       <View
         style={{
-          borderBottomColor: "#ab00ff",
-          borderBottomWidth: 3.6,
+          borderBottomColor: "#ffab00",
+          borderBottomWidth: 3,
           width: 100,
         }}
       />
@@ -56,6 +56,7 @@ export default function LoginForm(props) {
         onChangeText={(text) => {
           setemail(text);
         }}
+        type="email"
         value={email}
       />
       <Input
@@ -84,8 +85,9 @@ export default function LoginForm(props) {
         <Text
           style={styles.cuenta}
           onPress={() => navigation.navigate("register")}
-        > {""}
-         
+        >
+          {" "}
+          {""}
           Crear cuenta
         </Text>
       </Text>
@@ -106,7 +108,7 @@ export default function LoginForm(props) {
             ssize={24}
             type="material-community"
             name="google"
-            color="#6b00ff"
+            color="#ffab00"
             backgroundColor="transparent"
             onPress={() => signInAsync()}
           />
@@ -116,12 +118,11 @@ export default function LoginForm(props) {
             size={24}
             type="material-community"
             name="facebook"
-            color="#6b00ff"
+            color="#ffab00"
             backgroundColor="transparent"
           />
         </TouchableOpacity>
       </View>
-     
     </View>
   );
 }
