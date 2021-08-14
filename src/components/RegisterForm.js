@@ -3,8 +3,8 @@ import { StyleSheet, Text, View } from "react-native";
 import { Icon, Input, Button } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
 import { validaremail } from "../Utils/Utils";
-import { isEmpty } from "lodash";
-import * as firebase from "firebase";
+import { isEmpty, size } from "lodash";
+import firebase from "firebase";
 
 export default function RegisterForm(props) {
   const { toastRef } = props;
@@ -14,6 +14,29 @@ export default function RegisterForm(props) {
   const navigation = useNavigation();
   const [show, setshow] = useState(true);
 
+  function crearcuenta() {
+    if (isEmpty(email) || isEmpty(password) || isEmpty(repetirPassword)) {
+      toastRef.current.show("Todos los campos son obligatorios");
+    } else if (!validaremail(email)) {
+      toastRef.current.show("Correo no es válido");
+    } else if (password !== repetirPassword) {
+      toastRef.current.show("Las contraseñas tienen que ser iguales");
+    } else if (size(password) < 11) {
+      toastRef.current.show(
+        "Las contraseñas deben tener al menos 11 carácteres"
+      );
+    } else {
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, password)
+        .then((response) => {
+          toastRef.current.show("Usuario registrado");
+        })
+        .catch((err) => {
+          toastRef.current.show("Intentemos de nuevo");
+        });
+    }
+  }
   return (
     <View style={styles.container}>
       <View
@@ -64,13 +87,17 @@ export default function RegisterForm(props) {
       <Button
         title="Crear cuenta"
         containerStyle={styles.btniniciarsesion}
-        buttonStyle={{ backgroundColor: "#ab00ff" }}
-        onPress={() => console.log("crear cuenta")}
+        buttonStyle={{
+          backgroundColor: "#ab00ff",
+        }}
+        onPress={() => crearcuenta()}
       />
       <Button
         title="Iniciar Sesion"
         containerStyle={styles.btniniciarsesion}
-        buttonStyle={{ backgroundColor: "#ffab00" }}
+        buttonStyle={{
+          backgroundColor: "#ffab00",
+        }}
         onPress={() => navigation.goBack()}
       />
     </View>

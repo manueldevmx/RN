@@ -22,20 +22,17 @@ export default function LoginForm(props) {
     } else if (!validaremail(email)) {
       toastRef.current.show("Ingrese un correo válido");
     } else {
-      setloading(true);
-
       firebase
         .auth()
         .signInWithEmailAndPassword(email, password)
         .then((response) => {
-          setloading(false);
+          
           toastRef.current.show("Ha iniciado sesión exitosamente");
           console.log(firebase.auth().currentUser);
         })
         .catch((err) => {
-          setloading(false);
           toastRef.current.show(
-            "Ha ocurrido un error al intentar iniciar sesión"
+            "¿Tus datos son correctos?"
           );
         });
     }
@@ -81,14 +78,13 @@ export default function LoginForm(props) {
         onPress={() => iniciarsesion()}
       />
       <Text style={styles.txtcrearcuenta}>
-        ¿No tienes cuenta?
+        ¿No Tienes Cuenta ?
         <Text
           style={styles.cuenta}
           onPress={() => navigation.navigate("register")}
         >
           {" "}
-          {""}
-          Crear cuenta
+          Crear Cuenta
         </Text>
       </Text>
 

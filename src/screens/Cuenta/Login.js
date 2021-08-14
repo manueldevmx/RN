@@ -1,13 +1,12 @@
 import React, { useRef } from "react";
 import { View, Text, StyleSheet, Image, StatusBar } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 import LoginForm from "../../components/LoginForm";
 import Toast from "react-native-easy-toast";
 
 
 export default function Login() {
 
-  const navigation = useNavigation();
+ 
   const toastRef = useRef();
 
   return (
