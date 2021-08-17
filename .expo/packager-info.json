@@ -1,9 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": null,
+  "expoServerPort": 19000,
   "packagerPort": 19000,
-  "expoServerNgrokUrl": "https://3g-7r2.anonymous.whatscommerce.exp.direct",
-  "packagerNgrokUrl": "https://packager.3g-7r2.anonymous.whatscommerce.exp.direct",
-  "ngrokPid": 12416,
-  "webpackServerPort": 19006
+  "expoServerNgrokUrl": "https://3g-7r2.hackguar.whatscommerce.exp.direct",
+  "packagerNgrokUrl": "https://packager.3g-7r2.hackguar.whatscommerce.exp.direct",
+  "ngrokPid": 93672,
+  "webpackServerPort": null,
+  "packagerPid": null
 }

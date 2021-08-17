@@ -4,7 +4,7 @@ import { Icon, Input, Button, Divider } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
 import { validaremail } from "../Utils/Utils";
 import { isEmpty } from "lodash";
-import { validarsesion } from "../Utils/Acciones";
+
 import * as firebase from "firebase";
 
 export default function LoginForm(props) {
@@ -14,7 +14,7 @@ export default function LoginForm(props) {
   const navigation = useNavigation();
   const [show, setshow] = useState(true);
 
-  validarsesion();
+
 
   const iniciarsesion = () => {
     if (isEmpty(email) || isEmpty(password)) {

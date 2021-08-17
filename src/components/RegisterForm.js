@@ -21,9 +21,9 @@ export default function RegisterForm(props) {
       toastRef.current.show("Correo no es válido");
     } else if (password !== repetirPassword) {
       toastRef.current.show("Las contraseñas tienen que ser iguales");
-    } else if (size(password) < 11) {
+    } else if (size(password) < 6) {
       toastRef.current.show(
-        "Las contraseñas deben tener al menos 11 carácteres"
+        "Las contraseñas deben tener al menos 6 carácteres"
       );
     } else {
       firebase

@@ -13,9 +13,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -27,6 +25,16 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "firebase": {
+        "apiKey": "AIzaSyBbGW9he6uwWoG1lX20qYDiDu3mGJqdg7Q",
+        "authDomain": "whatscommerce-db.firebaseapp.com",
+        "projectId": "whatscommerce-db",
+        "storageBucket": "whatscommerce-db.appspot.com",
+        "messagingSenderId": "969647467121",
+        "appId": "1:969647467121:web:7aff4522e42302f13d89d0"
+      }
     }
   }
 }
