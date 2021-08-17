@@ -1,5 +1,9 @@
 import React, { useState, useRef } from "react";
+
 import { StyleSheet, View, Text, Image, Alert } from "react-native";
+
+import { StyleSheet, View, Text, Image } from "react-native";
+
 import { Button } from "react-native-elements";
 import CountryPicker from "react-native-country-picker-modal";
 import { useNavigation } from "@react-navigation/native";
@@ -7,7 +11,10 @@ import { isEmpty } from "lodash";
 import { Icon } from "react-native-elements/dist/icons/Icon";
 import { TextInput } from "react-native";
 import FirebaseRecapcha from "../../Utils/FirebaseRecapcha";
-import { enviarautenticacionphone, registerPushNotifications } from "../../Utils/Acciones";
+import {
+  enviarautenticacionphone,
+  registerPushNotifications,
+} from "../../Utils/Acciones";
 
 export default function EnviarConfirmacion() {
   const [country, setcountry] = useState("MX");
@@ -133,7 +140,11 @@ const styles = StyleSheet.create({
   viewwhatsapp: {
     flexDirection: "row",
     alignItems: "center",
+
     borderRadius: 20,
+
+    borderRadius: 10,
+
     height: 50,
     marginHorizontal: 20,
     paddingHorizontal: 20,

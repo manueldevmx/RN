@@ -11,6 +11,7 @@ export default function FirebaseRecapcha(props) {
     <FirebaseRecaptchaVerifierModal
       ref={referencia}
       title="¿No eres Robot, cierto?"
+      title="CONFIRMA QUE NO ERES UN ROBOX"
       cancelLabel="x"
       firebaseConfig={Constants.manifest.extra.firebase}
     />
